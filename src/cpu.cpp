@@ -12,6 +12,8 @@
 using namespace std;
 namespace fs = std::filesystem;
 
+// TODO: Optimize get_core_count() calls, and make it a variable in this file, or a parameter for functions that need it
+
 /**
  * Reference: 
  *  https://stackoverflow.com/questions/30073839/c-extract-number-from-the-middle-of-a-string

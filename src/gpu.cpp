@@ -1,9 +1,28 @@
 #include <filesystem>
 #include <fstream>
+#include <string>
 #include "utils.h"
 
 using namespace std;
 namespace fs = std::filesystem;
+
+/**
+ * Reference:
+ *   https://stackoverflow.com/questions/23834624/remove-first-and-last-character-c
+ *   https://stackoverflow.com/questions/478898/how-do-i-execute-a-command-and-get-the-output-of-the-command-within-c-using-po
+ * 
+ * @returns Name of GPU model.
+ */
+std::string get_gpu_name()
+{
+    std::string name = exec("lspci -k | grep -EA2 'VGA|3D'");
+    
+    // get rid of trailing curly braces
+    //name.erase(0, 1);
+    //name.erase(name.size() - 1);
+
+    return name;
+}
 
 /**
  * Reference:

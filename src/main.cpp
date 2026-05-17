@@ -33,6 +33,8 @@ int main()
     */
 
     cout << "Avg clock speed: " << get_avg_cpu_freq() << endl;
+
+    cout << get_gpu_name() << endl;
     
     return 0;
 }
