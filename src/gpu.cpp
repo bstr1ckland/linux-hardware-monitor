@@ -17,8 +17,8 @@ std::string get_gpu_name()
 {
     std::string raw = exec("lspci | grep -E 'VGA|3D'");
     
-    size_t start = raw.rfind('[');
-    size_t end = raw.rfind(']');
+    size_t start = raw.rfind("[");
+    size_t end = raw.rfind("]");
     
     return raw.substr(start + 1, end - start - 1);
 }

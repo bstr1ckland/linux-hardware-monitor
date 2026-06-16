@@ -42,9 +42,9 @@ std::string get_version()
 {
     std::ifstream file("/proc/version");
     std::string version;
-
     getline(file, version);
-    // TODO: FIX UP
 
-    return version;
+    size_t linux_start = version.find("Linux version ");
+    size_t linux_end = version.find(" (", linux_start);
+    return version.substr(linux_start, linux_end - linux_start);
 }

@@ -7,6 +7,7 @@
 #include "gpu.h"
 #include "utils.h"
 #include "system.h"
+#include "ram.h"
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -32,7 +33,8 @@ int main()
     screen.Print();
     */
 
-
+    cout << get_total_ram() << endl;
+    cout << get_used_ram() << endl;
     
     return 0;
 }
