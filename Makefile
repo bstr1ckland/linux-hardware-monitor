@@ -3,4 +3,4 @@ main: src/main.cpp
   	-lftxui-component -lftxui-dom -lftxui-screen
 
 clean:
-	rm lhwmon
+	rm lhmon
